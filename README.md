@@ -1,2 +1,6 @@
-# modern_cxx_study
-effective modern c++, Modern C++ Challenge Study
+# 모던 C++ 스터디
+엔진셀 스터디 저장소입니다.
+
+도서 
+- 이펙티브 모던 C++
+- 모던 C++ 챌린지
