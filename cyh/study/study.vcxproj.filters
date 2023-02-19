@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="function">
+      <UniqueIdentifier>{284e8666-81bd-4664-8285-26cd2c7268bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ipv4">
+      <UniqueIdentifier>{77551c1a-6568-4ac9-899e-ff0e9c504a2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="array_2d">
+      <UniqueIdentifier>{62c7e404-f86b-4bc8-bd4e-0a5e5bd27cae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="function.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="ipv4.cpp">
+      <Filter>ipv4</Filter>
+    </ClCompile>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="array_2d.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="function.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="using_types.h" />
+    <ClInclude Include="ipv4.h">
+      <Filter>ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="array_2d.h" />
+  </ItemGroup>
+</Project>

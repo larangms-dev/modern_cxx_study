@@ -1,6 +1,5 @@
 ﻿#include <cmath>
 
-#include "pch.h"
 #include "function.h"
 
 vector<UINT64> Function::PrimeFactorization(UINT64 n)
