@@ -14,6 +14,12 @@
     <Filter Include="array_2d">
       <UniqueIdentifier>{62c7e404-f86b-4bc8-bd4e-0a5e5bd27cae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="handle_wrapper">
+      <UniqueIdentifier>{e25a45a5-b4d1-40a7-b05b-8506ffea7ba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="temperature">
+      <UniqueIdentifier>{d08aa518-1aec-492c-8f13-0aeaad318f23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="function.cpp">
@@ -23,16 +29,29 @@
       <Filter>ipv4</Filter>
     </ClCompile>
     <ClCompile Include="entry.cpp" />
-    <ClCompile Include="array_2d.cpp" />
+    <ClCompile Include="handle_wrapper.cpp">
+      <Filter>handle_wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="temperature.cpp">
+      <Filter>temperature</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="function.h">
       <Filter>function</Filter>
     </ClInclude>
-    <ClInclude Include="using_types.h" />
     <ClInclude Include="ipv4.h">
       <Filter>ipv4</Filter>
     </ClInclude>
-    <ClInclude Include="array_2d.h" />
+    <ClInclude Include="array_2d.h">
+      <Filter>array_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="handle_wrapper.h">
+      <Filter>handle_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="temperature.h">
+      <Filter>temperature</Filter>
+    </ClInclude>
+    <ClInclude Include="using_types.h" />
   </ItemGroup>
 </Project>

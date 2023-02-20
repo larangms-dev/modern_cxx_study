@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
-#include "function.h"
+#include "temperature.h"
 #include "ipv4.h"
-#include "array_2d.h"
+
+using namespace std;
 
 int main()
 {

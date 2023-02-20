@@ -71,7 +71,7 @@ private:
 
 template<typename T>
 inline Array2D<T>::Array2D(UINT32 column, UINT32 row)
-	:columns{ column }, rows{ row }, arr{ nullptr }
+	: columns{ column }, rows{ row }, arr{ nullptr }
 {
 	arr = new T[columns * rows];
 }

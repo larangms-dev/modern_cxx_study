@@ -143,15 +143,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="array_2d.cpp" />
     <ClCompile Include="entry.cpp" />
     <ClCompile Include="function.cpp" />
+    <ClCompile Include="handle_wrapper.cpp" />
     <ClCompile Include="ipv4.cpp" />
+    <ClCompile Include="temperature.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array_2d.h" />
     <ClInclude Include="function.h" />
+    <ClInclude Include="handle_wrapper.h" />
     <ClInclude Include="ipv4.h" />
+    <ClInclude Include="temperature.h" />
     <ClInclude Include="using_types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

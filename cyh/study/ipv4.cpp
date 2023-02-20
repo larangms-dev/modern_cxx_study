@@ -2,23 +2,23 @@
 
 #include "ipv4.h"
 
-IPv4::IPv4()
-	:ip{ 0 }
+IPv4::IPv4() noexcept
+	: ip{ 0 }
 {
 }
 
-IPv4::IPv4(UINT32 ip)
+IPv4::IPv4(UINT32 ip) noexcept
 {
 	Set(ip);
 }
 
-IPv4::IPv4(UINT8 part1, UINT8 part2, UINT8 part3, UINT8 part4)
+IPv4::IPv4(UINT8 part1, UINT8 part2, UINT8 part3, UINT8 part4) noexcept
 {
 	Set(part1, part2, part3, part4);
 }
 
 IPv4::IPv4(std::string_view ip_str)
-	:ip{ 0 }
+	: ip{ 0 }
 {
 	Set(ip_str);
 }
@@ -31,84 +31,84 @@ IPv4::IPv4(std::wstring_view ip_wstr)
 
 IPv4& IPv4::operator=(const IPv4& other) noexcept
 {
-	Set(other.Get());
+	ip = other.ip;
 	return *this;
 }
 
 IPv4& IPv4::operator++() noexcept
 {
-	Set(Get() + 1);
+	++ip;
 	return *this;
 }
 
 IPv4& IPv4::operator--() noexcept
 {
-	Set(Get() - 1);
+	--ip;
 	return *this;
 }
 
 IPv4& IPv4::operator++(int) noexcept
 {
-	Set(Get() + 1);
+	ip++;
 	return *this;
 }
 
 IPv4& IPv4::operator--(int) noexcept
 {
-	Set(Get() - 1);
+	ip--;
 	return *this;
 }
 
 IPv4 IPv4::operator+(UINT32 value) noexcept
 {
-	return IPv4(Get() + value);
+	return IPv4(ip + value);
 }
 
 IPv4 IPv4::operator-(UINT32 value) noexcept
 {
-	return IPv4(Get() - value);
+	return IPv4(ip - value);
 }
 
 IPv4& IPv4::operator+=(UINT32 value) noexcept
 {
-	Set(Get() + value);
+	ip += value;
 	return *this;
 }
 
 IPv4& IPv4::operator-=(UINT32 value) noexcept
 {
-	Set(Get() - value);
+	ip -= value;
 	return *this;
 }
 
 bool IPv4::operator==(const IPv4& other) const noexcept
 {
-	return Get() == other.Get();
+	return ip == other.ip;
 }
 
 bool IPv4::operator!=(const IPv4& other) const noexcept
 {
-	return Get() != other.Get();
+	return ip != other.ip;
 }
 
 bool IPv4::operator<(const IPv4& other) const noexcept
 {
-	return Get() < other.Get();
+	return ip < other.ip;
 }
 
 bool IPv4::operator>(const IPv4& other) const noexcept
 {
-	return Get() > other.Get();
+	return ip > other.ip;
 }
 
 bool IPv4::operator<=(const IPv4& other) const noexcept
 {
-	return Get() <= other.Get();
+	return ip <= other.ip;
 }
 
 bool IPv4::operator>=(const IPv4& other) const noexcept
 {
-	return Get() >= other.Get();
+	return ip >= other.ip;
 }
 
 UINT32 IPv4::Get() const noexcept

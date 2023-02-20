@@ -7,9 +7,9 @@
 class IPv4
 {
 public:
-	IPv4();
-	IPv4(UINT32 ip);
-	IPv4(UINT8 part1, UINT8 part2, UINT8 part3, UINT8 part4);
+	IPv4() noexcept;
+	IPv4(UINT32 ip) noexcept;
+	IPv4(UINT8 part1, UINT8 part2, UINT8 part3, UINT8 part4) noexcept;
 	IPv4(std::string_view ip_str);
 	IPv4(std::wstring_view ip_wstr);
 public:
