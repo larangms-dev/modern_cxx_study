@@ -143,6 +143,8 @@
     <ClInclude Include="problem15_16.h" />
     <ClInclude Include="problem17.h" />
     <ClInclude Include="problem18_20.h" />
+    <ClInclude Include="problem21.h" />
+    <ClInclude Include="problem22.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp" />

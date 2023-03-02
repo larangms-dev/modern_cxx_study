@@ -24,6 +24,12 @@
     <ClInclude Include="problem18_20.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="problem21.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="problem22.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
