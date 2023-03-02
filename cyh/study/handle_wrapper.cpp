@@ -29,7 +29,7 @@ HandleWrapper::HandleWrapper(HANDLE&& handle) noexcept
 
 HandleWrapper::~HandleWrapper()
 {
-	if (handle == nullptr) return;
+	if (!IsValid()) return;
 	CloseHandle(handle);
 	handle = nullptr;
 }

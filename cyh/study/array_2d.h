@@ -80,6 +80,7 @@ template<typename T>
 inline Array2D<T>::Array2D(Array2D&& other)
 {
 	arr = other.arr;
+	other.arr = nullptr;
 	columns = other.columns;
 	rows = other.rows;
 }
@@ -87,6 +88,7 @@ inline Array2D<T>::Array2D(Array2D&& other)
 template<typename T>
 inline Array2D<T>::~Array2D()
 {
+	if (arr == nullptr) return;
 	delete[] arr;
 	arr = nullptr;
 }
