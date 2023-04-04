@@ -23,6 +23,9 @@
     <Filter Include="license_plate_verifier">
       <UniqueIdentifier>{38b37f1c-a66f-490d-9745-47fa998048be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="date_formatter">
+      <UniqueIdentifier>{0dd11000-4e86-4f84-8320-f6d4bffe579a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="function.cpp">
@@ -40,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="license_plate_verifier.cpp">
       <Filter>license_plate_verifier</Filter>
+    </ClCompile>
+    <ClCompile Include="date_formatter.cpp">
+      <Filter>date_formatter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +67,9 @@
     <ClInclude Include="using_types.h" />
     <ClInclude Include="license_plate_verifier.h">
       <Filter>license_plate_verifier</Filter>
+    </ClInclude>
+    <ClInclude Include="date_formatter.h">
+      <Filter>date_formatter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

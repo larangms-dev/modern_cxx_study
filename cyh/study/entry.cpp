@@ -5,19 +5,16 @@
 #include "temperature.h"
 #include "ipv4.h"
 #include "license_plate_verifier.h"
+#include "date_formatter.h"
 
 using namespace std;
 
 int main()
 {
-	LicensePlate temp;
+	auto DD_MM_YYYY1 = DateFormatter::ChangeDateFormat(L"12.25.2023", DATE_FORMAT::YYYY_MM_DD, L'&');
+	auto DD_MM_YYYY2 = DateFormatter::ChangeDateFormat(L"2023.12.25", DATE_FORMAT::DD_MM_YYYY, L'/');
 
-	wcin >> temp;
-
-	auto verification_result = LicensePlateVerifier::Verification(temp);
-	auto license_number = LicensePlateVerifier::GetLicensePlateNumber(temp);
-
-	cout << "verification_result: " << verification_result << " / license_number: " << license_number << "\n";
+	wcout << DD_MM_YYYY1 << "  " << DD_MM_YYYY2 << "\n";
 
 	return 0;
 }

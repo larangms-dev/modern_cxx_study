@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="date_formatter.cpp" />
     <ClCompile Include="entry.cpp" />
     <ClCompile Include="function.cpp" />
     <ClCompile Include="handle_wrapper.cpp" />
@@ -152,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array_2d.h" />
+    <ClInclude Include="date_formatter.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="handle_wrapper.h" />
     <ClInclude Include="ipv4.h" />
