@@ -147,6 +147,7 @@
     <ClCompile Include="function.cpp" />
     <ClCompile Include="handle_wrapper.cpp" />
     <ClCompile Include="ipv4.cpp" />
+    <ClCompile Include="license_plate_verifier.cpp" />
     <ClCompile Include="temperature.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="function.h" />
     <ClInclude Include="handle_wrapper.h" />
     <ClInclude Include="ipv4.h" />
+    <ClInclude Include="license_plate_verifier.h" />
     <ClInclude Include="temperature.h" />
     <ClInclude Include="using_types.h" />
   </ItemGroup>
