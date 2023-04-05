@@ -2,9 +2,9 @@
 
 #include "function.h"
 
-vector<UINT64> Function::PrimeFactorization(UINT64 n)
+vector<uint64_t> Function::PrimeFactorization(uint64_t n)
 {
-	vector<UINT64> answer;
+	vector<uint64_t> answer;
 
 	// n의 제곱근을 구하는 이유는
 	// 10을 예로들면 10의 제곱근은 대략 3이다 (9의 제곱근이 3이며 16의 제곱근이 4)
@@ -18,7 +18,7 @@ vector<UINT64> Function::PrimeFactorization(UINT64 n)
 	// 2 / 2 = 1이 되기에 while문이 종료된다.
 	// answer(5, 2)
 
-	UINT64 n_sqrt = floor(sqrt(n)), n_mpn = 0;
+	uint64_t n_sqrt = floor(sqrt(n)), n_mpn = 0;
 
 	while (n > 1)
 	{
@@ -40,14 +40,14 @@ vector<UINT64> Function::PrimeFactorization(UINT64 n)
 	return answer;
 }
 
-UINT64 Function::BinaryToGrayCode(UINT64 n)
+uint64_t Function::BinaryToGrayCode(uint64_t n)
 {
-	UINT64 answer = 0, n_exponent = Exponent(n);
+	uint64_t answer = 0, n_exponent = Exponent(n);
 	// 최상위 비트는 그대로 적용
 	answer |= 1ull << n_exponent;
 
 	// n의 i 번째 비트와 n의 i + 1 번째 비트(i 번째 비트보다 한칸 왼쪽에 있는)와 XOR 연산
-	for (UINT64 i = 0; i < n_exponent; i++)
+	for (uint64_t i = 0; i < n_exponent; i++)
 	{
 		// XOR 연산 결과가 i 번째 비트에 반영되어야 하므로 i만큼 왼쪽 쉬프트 연산 수행
 		answer |= (Bit(n, i) ^ Bit(n, i + 1)) << i;
@@ -56,14 +56,14 @@ UINT64 Function::BinaryToGrayCode(UINT64 n)
 	return answer;
 }
 
-UINT64 Function::GrayCodeToBinary(UINT64 n)
+uint64_t Function::GrayCodeToBinary(uint64_t n)
 {
-	UINT64 answer = 0, n_exponent = Exponent(n);
+	uint64_t answer = 0, n_exponent = Exponent(n);
 	// 최상위 비트는 그대로 적용
 	answer |= 1ull << n_exponent;
 
 	// answer의 i + 1 번째 비트(i 번째 비트보다 한칸 왼쪽에 있는)와 n의 i 번째 비트와 XOR 연산
-	for (UINT64 i = n_exponent - 1; i > 0; i--)
+	for (uint64_t i = n_exponent - 1; i > 0; i--)
 	{
 		// XOR 연산 결과가 i 번째 비트에 반영되어야 하므로 i만큼 왼쪽 쉬프트 연산 수행
 		answer |= (Bit(answer, i + 1) ^ Bit(n, i)) << i;
@@ -75,9 +75,9 @@ UINT64 Function::GrayCodeToBinary(UINT64 n)
 	return answer;
 }
 
-UINT64 Function::Exponent(UINT64 n)
+uint64_t Function::Exponent(uint64_t n)
 {
-	UINT64 answer = 0;
+	uint64_t answer = 0;
 
 	// 최상위 비트가 몇 번째 비트인지 확인
 	// n을 오른쪽으로 1칸씩 밀면서 1이상이면 반복
@@ -89,7 +89,7 @@ UINT64 Function::Exponent(UINT64 n)
 	return answer;
 }
 
-UINT64 Function::Bit(UINT64 base, UINT64 index)
+uint64_t Function::Bit(uint64_t base, uint64_t index)
 {
 	// base에 대해서 1을 index만큼 왼쪽으로 밀었을 때 그 비트가 1인지 0인지 확인
 	return (base & (1ull << index) ? 1 : 0);
@@ -98,9 +98,9 @@ UINT64 Function::Bit(UINT64 base, UINT64 index)
 struct RomanPair
 {
 	wstring roman;
-	UINT64 value;
+	uint64_t value;
 };
-wstring Function::RomaNumber(UINT64 n)
+wstring Function::RomaNumber(uint64_t n)
 {
 	wstring answer;
 	vector<RomanPair> romans
@@ -118,7 +118,7 @@ wstring Function::RomaNumber(UINT64 n)
 	// 몫
 	double share = 0;
 	// 나머지
-	UINT64 remainder = 0;
+	uint64_t remainder = 0;
 	// 제일 큰 수 부터 연산을 수행
 	for (auto& iter : romans)
 	{
@@ -134,7 +134,7 @@ wstring Function::RomaNumber(UINT64 n)
 		// 몫이 1보다 크다면 몫 만큼 반복하면서 나누었던 수의 로마자를 추가한다.
 		// 12(XII) / 10(X) = 1.2
 		// answer(X)
-		for (UINT64 j = 0; j < share; j++)
+		for (uint64_t j = 0; j < share; j++)
 		{
 			answer += iter.roman;
 		}

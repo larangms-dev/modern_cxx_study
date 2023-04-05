@@ -20,6 +20,9 @@
     <Filter Include="temperature">
       <UniqueIdentifier>{d08aa518-1aec-492c-8f13-0aeaad318f23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="string_convertor">
+      <UniqueIdentifier>{bdd1867a-80b6-419a-8a78-1c0585f8ec75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="function.cpp">
@@ -34,6 +37,9 @@
     </ClCompile>
     <ClCompile Include="temperature.cpp">
       <Filter>temperature</Filter>
+    </ClCompile>
+    <ClCompile Include="string_convertor.cpp">
+      <Filter>string_convertor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +58,8 @@
     <ClInclude Include="temperature.h">
       <Filter>temperature</Filter>
     </ClInclude>
-    <ClInclude Include="using_types.h" />
+    <ClInclude Include="string_convertor.h">
+      <Filter>string_convertor</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

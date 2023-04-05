@@ -1,7 +1,7 @@
 #pragma once
-#include <algorithm>
+#include <stdint.h>
 
-#include "using_types.h"
+#include <algorithm>
 
 template<typename T>
 class Array2D
@@ -41,19 +41,19 @@ public:
 		T* p;
 	};
 public:
-	Array2D(UINT32 x, UINT32 y);
+	Array2D(uint32_t x, uint32_t y);
 	Array2D(Array2D&& other);
 	~Array2D();
 public:
 	Array2D& operator=(Array2D&& other);
 public:
-	T& at(UINT32 x, UINT32 y) const;
+	T& at(uint32_t x, uint32_t y) const;
 	T* const data();
 	void fill(const T& data);
 	void swap(Array2D& other);
 public:
-	UINT32 column();
-	UINT32 row();
+	uint32_t column();
+	uint32_t row();
 public:
 	Iterator begin()
 	{
@@ -64,13 +64,13 @@ public:
 		return Iterator(arr + columns * rows);
 	}
 private:
-	UINT32 columns;
-	UINT32 rows;
+	uint32_t columns;
+	uint32_t rows;
 	T* arr;
 };
 
 template<typename T>
-inline Array2D<T>::Array2D(UINT32 column, UINT32 row)
+inline Array2D<T>::Array2D(uint32_t column, uint32_t row)
 	: columns{ column }, rows{ row }, arr{ nullptr }
 {
 	arr = new T[columns * rows];
@@ -103,7 +103,7 @@ inline Array2D<T>& Array2D<T>::operator=(Array2D<T>&& other)
 }
 
 template<typename T>
-inline T& Array2D<T>::at(UINT32 column, UINT32 row) const
+inline T& Array2D<T>::at(uint32_t column, uint32_t row) const
 {
 	return arr[row * columns + column];
 }
@@ -124,8 +124,8 @@ template<typename T>
 inline void Array2D<T>::swap(Array2D& other)
 {
 	T* temp_arr = other.arr;
-	UINT32 temp_columns = other.columns;
-	UINT32 temp_rows = other.rows;
+	uint32_t temp_columns = other.columns;
+	uint32_t temp_rows = other.rows;
 	other.arr = arr;
 	other.columns = columns;
 	other.rows = rows;
@@ -135,13 +135,13 @@ inline void Array2D<T>::swap(Array2D& other)
 }
 
 template<typename T>
-inline UINT32 Array2D<T>::column()
+inline uint32_t Array2D<T>::column()
 {
 	return columns;
 }
 
 template<typename T>
-inline UINT32 Array2D<T>::row()
+inline uint32_t Array2D<T>::row()
 {
 	return rows;
 }

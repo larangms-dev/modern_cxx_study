@@ -147,6 +147,7 @@
     <ClCompile Include="function.cpp" />
     <ClCompile Include="handle_wrapper.cpp" />
     <ClCompile Include="ipv4.cpp" />
+    <ClCompile Include="string_convertor.cpp" />
     <ClCompile Include="temperature.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,8 +155,8 @@
     <ClInclude Include="function.h" />
     <ClInclude Include="handle_wrapper.h" />
     <ClInclude Include="ipv4.h" />
+    <ClInclude Include="string_convertor.h" />
     <ClInclude Include="temperature.h" />
-    <ClInclude Include="using_types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

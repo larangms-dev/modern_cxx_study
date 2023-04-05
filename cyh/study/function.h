@@ -1,8 +1,8 @@
 ﻿#pragma once
+#include <stdint.h>
+
 #include <vector>
 #include <string>
-
-#include "using_types.h"
 
 using namespace std;
 
@@ -10,15 +10,15 @@ class Function
 {
 public:
 	// 소인수분해
-	static vector<UINT64> PrimeFactorization(UINT64 n);
-	static UINT64 BinaryToGrayCode(UINT64 n);
-	static UINT64 GrayCodeToBinary(UINT64 n);
+	static vector<uint64_t> PrimeFactorization(uint64_t n);
+	static uint64_t BinaryToGrayCode(uint64_t n);
+	static uint64_t GrayCodeToBinary(uint64_t n);
 	// 2^x + (0 or 1)에서 x의 값을 반환
-	static UINT64 Exponent(UINT64 n);
+	static uint64_t Exponent(uint64_t n);
 	// base값의 index 번째 비트를 반환
-	static UINT64 Bit(UINT64 base, UINT64 index);
+	static uint64_t Bit(uint64_t base, uint64_t index);
 	// n을 로마숫자로 변환하여 반환
-	static wstring RomaNumber(UINT64 n);
+	static wstring RomaNumber(uint64_t n);
 	// 템플릿 가변 인자를 사용하여 < 연산자를 사용해 가장 작은 값을 반환하는 함수
 	template<typename T>
 	static T Min(const T op1, const T op2);

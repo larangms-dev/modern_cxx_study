@@ -7,12 +7,12 @@ IPv4::IPv4() noexcept
 {
 }
 
-IPv4::IPv4(UINT32 ip) noexcept
+IPv4::IPv4(uint32_t ip) noexcept
 {
 	Set(ip);
 }
 
-IPv4::IPv4(UINT8 part1, UINT8 part2, UINT8 part3, UINT8 part4) noexcept
+IPv4::IPv4(uint8_t part1, uint8_t part2, uint8_t part3, uint8_t part4) noexcept
 {
 	Set(part1, part2, part3, part4);
 }
@@ -59,23 +59,23 @@ IPv4& IPv4::operator--(int) noexcept
 	return *this;
 }
 
-IPv4 IPv4::operator+(UINT32 value) noexcept
+IPv4 IPv4::operator+(uint32_t value) noexcept
 {
 	return IPv4(ip + value);
 }
 
-IPv4 IPv4::operator-(UINT32 value) noexcept
+IPv4 IPv4::operator-(uint32_t value) noexcept
 {
 	return IPv4(ip - value);
 }
 
-IPv4& IPv4::operator+=(UINT32 value) noexcept
+IPv4& IPv4::operator+=(uint32_t value) noexcept
 {
 	ip += value;
 	return *this;
 }
 
-IPv4& IPv4::operator-=(UINT32 value) noexcept
+IPv4& IPv4::operator-=(uint32_t value) noexcept
 {
 	ip -= value;
 	return *this;
@@ -111,7 +111,7 @@ bool IPv4::operator>=(const IPv4& other) const noexcept
 	return ip >= other.ip;
 }
 
-UINT32 IPv4::Get() const noexcept
+uint32_t IPv4::Get() const noexcept
 {
 	return ip;
 }
@@ -124,10 +124,10 @@ std::string IPv4::ToString() const noexcept
 
 std::wstring IPv4::ToWString() const noexcept
 {
-	UINT8 part1 = (UINT8)(ip >> 24);
-	UINT8 part2 = (UINT8)(ip >> 16);
-	UINT8 part3 = (UINT8)(ip >> 8);
-	UINT8 part4 = (UINT8)ip;
+	uint8_t part1 = (uint8_t)(ip >> 24);
+	uint8_t part2 = (uint8_t)(ip >> 16);
+	uint8_t part3 = (uint8_t)(ip >> 8);
+	uint8_t part4 = (uint8_t)ip;
 
 	std::wstringstream wss;
 
@@ -136,12 +136,12 @@ std::wstring IPv4::ToWString() const noexcept
 	return wss.str();
 }
 
-void IPv4::Set(UINT32 ip) noexcept
+void IPv4::Set(uint32_t ip) noexcept
 {
 	this->ip = ip;
 }
 
-void IPv4::Set(UINT8 part1, UINT8 part2, UINT8 part3, UINT8 part4) noexcept
+void IPv4::Set(uint8_t part1, uint8_t part2, uint8_t part3, uint8_t part4) noexcept
 {
 	ip = part4;
 	ip |= part3 << 8;
@@ -162,7 +162,7 @@ void IPv4::Set(std::wstring_view wstr)
 
 	std::wstringstream wss(wstr.data());
 	std::wstring part;
-	UINT16 count = 3;
+	uint16_t count = 3;
 
 	try
 	{
