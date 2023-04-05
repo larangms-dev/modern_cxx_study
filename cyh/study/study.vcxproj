@@ -143,18 +143,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="date_formatter.cpp" />
     <ClCompile Include="entry.cpp" />
     <ClCompile Include="function.cpp" />
     <ClCompile Include="handle_wrapper.cpp" />
     <ClCompile Include="ipv4.cpp" />
+    <ClCompile Include="license_plate_verifier.cpp" />
     <ClCompile Include="string_convertor.cpp" />
     <ClCompile Include="temperature.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array_2d.h" />
+    <ClInclude Include="date_formatter.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="handle_wrapper.h" />
     <ClInclude Include="ipv4.h" />
+    <ClInclude Include="license_plate_verifier.h" />
     <ClInclude Include="string_convertor.h" />
     <ClInclude Include="temperature.h" />
   </ItemGroup>

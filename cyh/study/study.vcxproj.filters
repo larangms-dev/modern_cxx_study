@@ -20,6 +20,11 @@
     <Filter Include="temperature">
       <UniqueIdentifier>{d08aa518-1aec-492c-8f13-0aeaad318f23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="license_plate_verifier">
+      <UniqueIdentifier>{38b37f1c-a66f-490d-9745-47fa998048be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="date_formatter">
+      <UniqueIdentifier>{0dd11000-4e86-4f84-8320-f6d4bffe579a}</UniqueIdentifier>
     <Filter Include="string_convertor">
       <UniqueIdentifier>{bdd1867a-80b6-419a-8a78-1c0585f8ec75}</UniqueIdentifier>
     </Filter>
@@ -38,6 +43,11 @@
     <ClCompile Include="temperature.cpp">
       <Filter>temperature</Filter>
     </ClCompile>
+    <ClCompile Include="license_plate_verifier.cpp">
+      <Filter>license_plate_verifier</Filter>
+    </ClCompile>
+    <ClCompile Include="date_formatter.cpp">
+      <Filter>date_formatter</Filter>
     <ClCompile Include="string_convertor.cpp">
       <Filter>string_convertor</Filter>
     </ClCompile>
@@ -58,6 +68,12 @@
     <ClInclude Include="temperature.h">
       <Filter>temperature</Filter>
     </ClInclude>
+    <ClInclude Include="using_types.h" />
+    <ClInclude Include="license_plate_verifier.h">
+      <Filter>license_plate_verifier</Filter>
+    </ClInclude>
+    <ClInclude Include="date_formatter.h">
+      <Filter>date_formatter</Filter>
     <ClInclude Include="string_convertor.h">
       <Filter>string_convertor</Filter>
     </ClInclude>

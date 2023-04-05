@@ -5,7 +5,8 @@
 
 #include "temperature.h"
 #include "ipv4.h"
-#include "string_convertor.h"
+#include "license_plate_verifier.h"
+#include "date_formatter.h"
 
 using namespace std;
 
@@ -53,15 +54,10 @@ void CallFunc(Func f, Val v)
 
 int main()
 {
-	F1(0);
+	auto DD_MM_YYYY1 = DateFormatter::ChangeDateFormat(L"12.25.2023", DATE_FORMAT::YYYY_MM_DD, L'&');
+	auto DD_MM_YYYY2 = DateFormatter::ChangeDateFormat(L"2023.12.25", DATE_FORMAT::DD_MM_YYYY, L'/');
 
-	char* p;
-
-	CallFunc(F1, p);
-
-	std::shared_ptr<MyClass> a{ 0 };
-
-	wcout << StringConvertor::ConvertToPascalCase(L"wellcome to nice c++ world! nice to meet you!") << L"\n";
+	wcout << DD_MM_YYYY1 << "  " << DD_MM_YYYY2 << "\n";
 
 	return 0;
 }
